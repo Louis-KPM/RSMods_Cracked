@@ -16,8 +16,8 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
 
-      - name: Build Installer project
-        run: msbuild Installer\Installer.csproj /p:Configuration=Release /p:Platform="Any CPU"
+      - name: Build solution
+        run: msbuild RSMods.sln /p:Configuration="Release" /p:Platform="Win32"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
