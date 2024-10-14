@@ -1,4 +1,4 @@
-# RSMods, but will work on cracked versions of RS2014 - Remastered.
+# RSMods, but will work on cracked versions of RS2014 - Remastered. \[Not quite got it building yet though]
 
 
 * Below is the original description for the great repo by reknowned anti-piracy advocate Lovrom8
