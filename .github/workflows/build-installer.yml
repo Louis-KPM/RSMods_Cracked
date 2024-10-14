@@ -1,0 +1,21 @@
+name: Build and Upload Installer
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Installer project
+        run: msbuild Installer\Installer.csproj /p:Configuration=Release /p:Platform="Any CPU"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: RS2014-Mod-Installer
+          path: Installer\bin\Release\RS2014-Mod-Installer.exe
