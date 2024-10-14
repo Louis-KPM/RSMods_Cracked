@@ -1,3 +1,5 @@
+# .github/workflows/build-installer.yml
+
 name: Build and Upload Installer
 
 on:
@@ -10,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
 
       - name: Build Installer project
         run: msbuild Installer\Installer.csproj /p:Configuration=Release /p:Platform="Any CPU"
